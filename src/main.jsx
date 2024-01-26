@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./main.css";
+import "./main.scss";
 import Home from "./pages/Home/homeKasa.jsx";
 import About from "./pages/About/aboutKasa.jsx";
 import Housing from "./pages/Housing/housingKasa.jsx";
