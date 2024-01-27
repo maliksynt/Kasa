@@ -1,0 +1,23 @@
+.footer {
+  background-color: black;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 210px;
+  gap: 15px;
+  margin-top: 50px;
+
+  img {
+    padding-top: 70px;
+  }
+
+  p {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+  }
+}
