@@ -9,15 +9,37 @@
   gap: 15px;
   margin-top: 50px;
 
-  img {
+  &__image {
     padding-top: 70px;
   }
 
-  p {
+  &__text {
     color: white;
     font-size: 24px;
     font-weight: 500;
     line-height: 34px;
     letter-spacing: 0em;
+
+    .hide {
+      display: none;
+    }
+  }
+
+  @media (max-width: 850px) {
+    margin-top: 0px;
+
+    &__image {
+      padding-top: 30px;
+    }
+
+    &__text {
+      font-size: 12px;
+      text-align: center;
+      line-height: 16px;
+
+      .hide {
+        display: block;
+      }
+    }
   }
 }

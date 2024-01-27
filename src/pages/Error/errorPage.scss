@@ -1,0 +1,55 @@
+@import "../../styles/variables.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $main-color;
+
+  h1 {
+    font-size: 288px;
+    font-weight: bold;
+
+    margin: 0;
+  }
+
+  h2 {
+    margin-top: 70px;
+    font-size: 36px;
+    font-weight: 500;
+
+    .hide {
+      display: none;
+    }
+  }
+
+  a {
+    p {
+      margin: 70px auto;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &:visited {
+      color: $main-color;
+    }
+  }
+
+  @media (max-width: 950px) {
+    h1 {
+      margin-top: 115px;
+      font-size: 96px;
+    }
+
+    h2 {
+      margin-top: 115px;
+      font-size: 18px;
+      text-align: center;
+
+      .hide {
+        display: block;
+      }
+    }
+  }
+}
