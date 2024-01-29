@@ -13,7 +13,6 @@ export default function Cards() {
               src={logement.cover}
               alt={logement.title}
             />
-
             <div className="card__layer">
               <p className="card__text">{logement.title}</p>
             </div>
