@@ -1,0 +1,81 @@
+@import "../../styles/variables.scss";
+
+.house-details {
+  width: 100%;
+  flex-direction: column;
+  margin-top: 30px;
+
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__description {
+    &__title {
+      margin-top: 0 !important;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      margin-top: 5px;
+      margin-bottom: 25px;
+    }
+
+    &__tags {
+      background-color: $main-color;
+      color: white;
+      margin-right: 15px;
+      padding: 5px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &__host {
+    display: flex;
+    flex-direction: column;
+    width: 175px;
+
+    &__picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+
+    &-infos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: right;
+      gap: 20px;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    &__rating {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+
+  &__accordion {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 75px;
+  }
+}
+
+.accordion__section {
+  width: 100% !important;
+}
