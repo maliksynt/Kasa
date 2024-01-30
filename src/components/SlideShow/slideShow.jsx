@@ -40,7 +40,7 @@ export default function SlideShow(props) {
         </div>
       )}
       {length > 1 && (
-        <div className="slider__index">
+        <div className="slider__index hide">
           <p>
             {currentPicture + 1}/{housePictures.length}
           </p>

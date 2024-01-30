@@ -49,4 +49,33 @@
     font-weight: 500;
     color: white;
   }
+  @media (max-width: 850px) {
+    &__image {
+      height: 335px;
+    }
+
+    &__nextBtn {
+      width: 5px;
+      height: 0;
+
+      img {
+        width: 20px;
+        height: 30px;
+      }
+    }
+    &__prevBtn {
+      width: 0;
+      left: -15px;
+      height: 0;
+
+      img {
+        width: 20px;
+        height: 30px;
+      }
+    }
+
+    .hide {
+      display: none;
+    }
+  }
 }
