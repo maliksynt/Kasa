@@ -20,7 +20,7 @@ export default function HouseDetails({ HouseDetails }) {
   return (
     <div className="house-details">
       <div className="house-details__content">
-        <div classlName="house-details__description">
+        <div className="house-details__description">
           <h2 className="house-details__description__title">
             {HouseDetails.title}
           </h2>
