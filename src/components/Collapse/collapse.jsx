@@ -31,10 +31,17 @@ export default function Collapse({ title, description }) {
           ref={content}
           style={{ maxHeight: `${setHeight}` }}
         >
-          <div
-            className="accordion__text"
-            dangerouslySetInnerHTML={{ __html: description }}
-          ></div>
+          <div className="accordion__text">
+            {Array.isArray(description) ? (
+              description.map((item, index) => (
+                <div style={{ margin: 0 }} key={index}>
+                  {item}
+                </div>
+              ))
+            ) : (
+              <p style={{ margin: 0 }}>{description}</p>
+            )}
+          </div>
         </div>
       </div>
     </main>

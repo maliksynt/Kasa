@@ -5,16 +5,16 @@ import inactiveStar from "../../assets/star-inactive.png";
 import Collapse from "../Collapse/collapse.jsx";
 
 export default function HouseDetails({ HouseDetails }) {
-  const equipments = HouseDetails.equipments.join("</br>");
+  // const equipments = HouseDetails.equipments.join("</br>");
 
   const hostRate = HouseDetails.rating;
   const stars = [];
 
   for (let i = 0; i < 5; i++) {
     if (i < hostRate) {
-      stars.push(<img src={activeStar} alt="star" />);
+      stars.push(<img key={i} src={activeStar} alt="star" />);
     } else {
-      stars.push(<img src={inactiveStar} alt="star" />);
+      stars.push(<img key={i} src={inactiveStar} alt="star" />);
     }
   }
   return (
@@ -25,8 +25,13 @@ export default function HouseDetails({ HouseDetails }) {
             {HouseDetails.title}
           </h2>
           <p>{HouseDetails.location}</p>
-          {HouseDetails.tags.map((tag) => (
-            <span className="house-details__description__tags">{tag}</span>
+          {HouseDetails.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="house-details__description__tags"
+            >
+              {tag}
+            </span>
           ))}
         </div>
         <div className="house-details__host">
@@ -42,8 +47,16 @@ export default function HouseDetails({ HouseDetails }) {
         </div>
       </div>
       <div className="house-details__accordion">
-        <Collapse title="Description" description={HouseDetails.description} />
-        <Collapse title="Équipements" description={equipments} />
+        <Collapse
+          key="description"
+          title="Description"
+          description={HouseDetails.description}
+        />
+        <Collapse
+          key="equipments"
+          title="Équipements"
+          description={HouseDetails.equipments}
+        />
       </div>
     </div>
   );
