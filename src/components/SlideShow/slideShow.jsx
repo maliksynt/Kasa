@@ -4,24 +4,31 @@ import nextArrow from "../../assets/nextArrow.svg";
 import prevArrow from "../../assets/prevArrow.svg";
 
 export default function SlideShow(props) {
+  // Initialisation des images du diaporama et du titre à partir des props.
   const housePictures = props.pictures;
   const length = housePictures.length;
   const houseTitle = props.title;
 
+  // Gestion de l'image actuelle avec useState
   const [currentPicture, setCurrentPicture] = useState(0);
 
+  // Fonctions pour passer à l'image suivante ou revenir au début si c'est la dernière
   const nextPicture = () => {
-    if (currentPicture === housePictures.length - 1) {
+    if (currentPicture === length - 1) {
       return setCurrentPicture(0);
     }
     setCurrentPicture(currentPicture + 1);
   };
+
+  // Fonctions pour passer à l'image précédente ou revenir à la dernière si c'est la première
   const prevPicture = () => {
     if (currentPicture === 0) {
-      return setCurrentPicture(housePictures.length - 1);
+      return setCurrentPicture(length - 1);
     }
     setCurrentPicture(currentPicture - 1);
   };
+
+  // Rendu du diaporama avec gestion des boutons suivant/précédent et affichage de l'index de l'image actuelle.
   return (
     <div className="slider">
       <img

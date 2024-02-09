@@ -13,6 +13,7 @@ export default function About() {
       <Header />
       <Banner img={paysageImage} alt="image d'un paysage" text={""} />
       <main className="collapse-container">
+        {/* Utilisation du composant Collapse pour générer les menu déroulants a partir de l'array du fichier JS. */}
         {collapseItems.map((item, id) => {
           return (
             <Collapse

@@ -5,15 +5,17 @@ import inactiveStar from "../../assets/star-inactive.png";
 import Collapse from "../Collapse/collapse.jsx";
 
 export default function HouseDetails({ HouseDetails }) {
-  // const equipments = HouseDetails.equipments.join("</br>");
-
+  // Calcul de la note de l'hôte et initialisation d'un tableau pour les étoiles
   const hostRate = HouseDetails.rating;
   const stars = [];
 
+  // Boucle pour générer les étoiles actives et inactives basées sur la note de l'hôte
   for (let i = 0; i < 5; i++) {
+    // Si l'indice de la boucle est inférieur à la note de l'hôte, on ajoute une étoile active
     if (i < hostRate) {
       stars.push(<img key={i} src={activeStar} alt="star" />);
     } else {
+      // Sinon, on ajoute une étoile inactive
       stars.push(<img key={i} src={inactiveStar} alt="star" />);
     }
   }
@@ -26,10 +28,7 @@ export default function HouseDetails({ HouseDetails }) {
           </h2>
           <p>{HouseDetails.location}</p>
           {HouseDetails.tags.map((tag, index) => (
-            <span
-              key={index}
-              className="house-details__description__tags"
-            >
+            <span key={index} className="house-details__description__tags">
               {tag}
             </span>
           ))}

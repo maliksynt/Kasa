@@ -13,7 +13,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/housing/:id" element={<Housing />} />
-          <Route path="*" element={<Error />} />
+          {/* Route pour gérer toute les erreurs d'URLs*/}
+          <Route path="*" element={<Error />} />{" "}
         </Routes>
       </div>
     </div>

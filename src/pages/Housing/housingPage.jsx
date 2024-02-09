@@ -8,10 +8,11 @@ import HouseDetails from "../../components/HouseDetails/houseDetails.jsx";
 import "./housingPage.scss";
 
 export default function Housing() {
-  const { id } = useParams();
-  const logement = logements.find((logement) => logement.id === id);
+  const { id } = useParams(); // Récupère l'identifiant du logement depuis l'URL
+  const logement = logements.find((logement) => logement.id === id); // Trouve le logement correspondant à l'identifiant
 
   if (!logement) {
+    // Si aucun logement n'est trouvé on redirige vers la page d'erreur
     return (
       <>
         <Navigate to="/error" />
